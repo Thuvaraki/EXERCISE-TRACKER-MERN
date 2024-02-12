@@ -22,6 +22,10 @@ export default class CreateExercise extends Component {
     };
   }
 
+  // The componentDidMount lifecycle method is called after the component is rendered. Here, it makes an HTTP GET request
+  // to fetch user data from the server. If users are retrieved, their usernames are stored in the component's state, and
+  // the default selected username is set to the first user.
+
   componentDidMount() {
     axios
       .get("http://localhost:5000/users/")
