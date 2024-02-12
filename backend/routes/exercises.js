@@ -3,7 +3,7 @@ const Exercise = require("../models/exercise");
 
 router.route("/").get((req, res) => {
   Exercise.find()
-    .then((exercise) => res.json({ exercise }))
+    .then((exercise) => res.json(exercise))
     .catch((error) => res.status(400).json("Error " + error));
 });
 
