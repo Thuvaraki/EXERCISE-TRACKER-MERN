@@ -46,6 +46,7 @@ export default class ExercisesList extends Component {
       console.log(response.data);
     });
 
+    // After deleting the exercise, it updates the component's state to remove the deleted exercise from the displayed list.
     this.setState({
       exercises: this.state.exercises.filter((el) => el._id !== id),
     });
